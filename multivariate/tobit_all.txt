@@ -1,0 +1,45 @@
+
+Call:
+tobit(formula = logneutralization ~ Gender + Age + Nicotine_consumption + 
+    variant * vaccine + virus + visit, left = log2(1), right = log2(2561), 
+    data = all_long)
+
+Observations: (49 Beobachtungen als fehlend gelöscht)
+         Total  Left-censored     Uncensored Right-censored 
+          6209             22           5794            393 
+
+Coefficients:
+                           Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                5.898443   0.175366  33.635  < 2e-16 ***
+Gendermale                -0.037158   0.048895  -0.760 0.447279    
+Age                        0.005692   0.001928   2.953 0.003151 ** 
+Nicotine_consumptionnever  0.012720   0.058681   0.217 0.828388    
+Nicotine_consumptionnk     0.448044   0.205212   2.183 0.029012 *  
+Nicotine_consumptionyes   -0.234239   0.078413  -2.987 0.002815 ** 
+variantD                  -0.722686   0.144090  -5.016 5.29e-07 ***
+variantO                  -0.832042   0.178922  -4.650 3.31e-06 ***
+vaccine                    1.690476   0.152136  11.112  < 2e-16 ***
+virusBA1                  -0.672304   0.088826  -7.569 3.77e-14 ***
+virusBA2                  -0.359429   0.088940  -4.041 5.32e-05 ***
+virusBA5                  -1.075088   0.088933 -12.089  < 2e-16 ***
+virusBQ                   -1.462795   0.107680 -13.585  < 2e-16 ***
+virusD614G                 0.950794   0.089752  10.594  < 2e-16 ***
+virusDelta                 0.320610   0.088962   3.604 0.000313 ***
+virusJN                   -3.649140   0.146401 -24.926  < 2e-16 ***
+virusXBB                  -3.059061   0.146327 -20.906  < 2e-16 ***
+visitv2                    1.163401   0.069763  16.676  < 2e-16 ***
+visitv4                    1.683884   0.070509  23.882  < 2e-16 ***
+visitv5                    0.903053   0.068906  13.106  < 2e-16 ***
+variantD:vaccine           1.067667   0.167327   6.381 1.76e-10 ***
+variantO:vaccine           1.709097   0.199154   8.582  < 2e-16 ***
+Log(scale)                 0.616719   0.009419  65.475  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Scale: 1.853 
+
+Gaussian distribution
+Number of Newton-Raphson Iterations: 5 
+Log-likelihood: -1.224e+04 on 23 Df
+Wald-statistic:  5448 on 21 Df, p-value: < 2.22e-16 
+

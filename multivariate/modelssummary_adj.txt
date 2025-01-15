@@ -1,0 +1,10 @@
+[1] "vaccinated Model adjusted:"
+   pairs Df SumsOfSqs  F.Model          R2 p.value p.adjusted sig
+1 O vs D  1  12684950 5.946260 0.007029122   0.002      0.006   *
+2 O vs A  1  13550878 5.849900 0.011564497   0.005      0.015   .
+3 D vs A  1   3472118 1.743516 0.003017803   0.158      0.474    
+[1] "Unvaccinated Model adjusted:"
+   pairs Df SumsOfSqs   F.Model         R2 p.value p.adjusted sig
+1 D vs O  1   8045464 10.772196 0.03488720   0.001      0.003   *
+2 D vs A  1   6139877  7.295346 0.02504450   0.001      0.003   *
+3 O vs A  1   6877638  5.353795 0.05282284   0.001      0.003   *

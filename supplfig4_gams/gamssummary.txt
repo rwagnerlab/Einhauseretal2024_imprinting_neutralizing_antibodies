@@ -1,0 +1,136 @@
+[1] "Visit 1-----------------------------------------------------------"
+
+	Spearman's rank correlation rho
+
+data:  btis_v1$adjusted_neutralization and btis_v1$Timevax
+S = 829683, p-value = 0.3764
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+        rho 
+-0.06888115 
+
+
+Family: gaussian 
+Link function: identity 
+
+Formula:
+adjusted_neutralization ~ s(Timevax, by = group) + s(Timevax)
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   701.81      54.76   12.81   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                                           edf Ref.df     F p-value
+s(Timevax):groupVaccinated + Alpha BTI   1.380  1.765 1.276   0.389
+s(Timevax):groupVaccinated + Delta BTI   0.750  0.750 2.736   0.154
+s(Timevax):groupVaccinated + Omicron BTI 0.750  0.750 0.828   0.432
+s(Timevax)                               1.145  1.441 1.181   0.434
+
+Rank: 36/37
+R-sq.(adj) =  0.0431   Deviance explained = 6.63%
+GCV = 4.6253e+05  Scale est. = 4.4861e+05  n = 167
+[1] "Visit 2-----------------------------------------------------------"
+
+	Spearman's rank correlation rho
+
+data:  btis_v2$adjusted_neutralization and btis_v2$Timevax
+S = 648099, p-value = 0.03304
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.1650527 
+
+
+Family: gaussian 
+Link function: identity 
+
+Formula:
+adjusted_neutralization ~ s(Timevax, by = group) + s(Timevax)
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1190.73      63.55   18.74   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                                           edf Ref.df     F p-value
+s(Timevax):groupVaccinated + Alpha BTI   1.176  1.487 0.145   0.853
+s(Timevax):groupVaccinated + Delta BTI   0.750  0.750 2.543   0.169
+s(Timevax):groupVaccinated + Omicron BTI 0.750  0.750 0.041   0.862
+s(Timevax)                               0.750  0.750 0.081   0.805
+
+Rank: 36/37
+R-sq.(adj) =  0.0218   Deviance explained =  4.2%
+GCV = 6.2814e+05  Scale est. = 6.115e+05  n = 167
+[1] "Visit 4-----------------------------------------------------------"
+
+	Spearman's rank correlation rho
+
+data:  btis_v4$adjusted_neutralization and btis_v4$Timevax
+S = 642302, p-value = 0.4579
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+       rho 
+0.05909156 
+
+
+Family: gaussian 
+Link function: identity 
+
+Formula:
+adjusted_neutralization ~ s(Timevax, by = group) + s(Timevax)
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1769.82      64.38   27.49   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                                           edf Ref.df     F p-value
+s(Timevax):groupVaccinated + Alpha BTI   1.285  1.645 0.215   0.699
+s(Timevax):groupVaccinated + Delta BTI   0.750  0.750 0.055   0.839
+s(Timevax):groupVaccinated + Omicron BTI 0.750  0.750 0.109   0.775
+s(Timevax)                               0.750  0.750 0.013   0.920
+
+Rank: 36/37
+R-sq.(adj) =  -0.00992   Deviance explained = 1.25%
+GCV = 6.1706e+05  Scale est. = 5.9957e+05  n = 160
+[1] "Visit 5-----------------------------------------------------------"
+
+	Spearman's rank correlation rho
+
+data:  btis_v5$adjusted_neutralization and btis_v5$Timevax
+S = 560140, p-value = 0.002146
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.2380391 
+
+
+Family: gaussian 
+Link function: identity 
+
+Formula:
+adjusted_neutralization ~ s(Timevax, by = group) + s(Timevax)
+
+Parametric coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   931.73      61.14   15.24   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                                           edf Ref.df     F p-value
+s(Timevax):groupVaccinated + Alpha BTI   1.744  2.231 1.660   0.180
+s(Timevax):groupVaccinated + Delta BTI   0.750  0.750 0.918   0.408
+s(Timevax):groupVaccinated + Omicron BTI 1.673  2.186 0.910   0.337
+s(Timevax)                               0.750  0.750 0.015   0.917
+
+Rank: 36/37
+R-sq.(adj) =  0.0657   Deviance explained = 9.39%
+GCV = 5.5036e+05  Scale est. = 5.3051e+05  n = 164

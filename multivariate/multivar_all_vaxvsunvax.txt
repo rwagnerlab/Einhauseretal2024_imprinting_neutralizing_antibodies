@@ -1,0 +1,111 @@
+
+Call:
+tobit(formula = logneutralization ~ Gender + Age + Nicotine_consumption + 
+    variant * vaccine + virus + visit, left = log2(1), right = log2(2561), 
+    data = all_long)
+
+Observations: (49 Beobachtungen als fehlend gelöscht)
+         Total  Left-censored     Uncensored Right-censored 
+          6209             22           5794            393 
+
+Coefficients:
+                           Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                5.898443   0.175366  33.635  < 2e-16 ***
+Gendermale                -0.037158   0.048895  -0.760 0.447279    
+Age                        0.005692   0.001928   2.953 0.003151 ** 
+Nicotine_consumptionnever  0.012720   0.058681   0.217 0.828388    
+Nicotine_consumptionnk     0.448044   0.205212   2.183 0.029012 *  
+Nicotine_consumptionyes   -0.234239   0.078413  -2.987 0.002815 ** 
+variantD                  -0.722686   0.144090  -5.016 5.29e-07 ***
+variantO                  -0.832042   0.178922  -4.650 3.31e-06 ***
+vaccine                    1.690476   0.152136  11.112  < 2e-16 ***
+virusBA1                  -0.672304   0.088826  -7.569 3.77e-14 ***
+virusBA2                  -0.359429   0.088940  -4.041 5.32e-05 ***
+virusBA5                  -1.075088   0.088933 -12.089  < 2e-16 ***
+virusBQ                   -1.462795   0.107680 -13.585  < 2e-16 ***
+virusD614G                 0.950794   0.089752  10.594  < 2e-16 ***
+virusDelta                 0.320610   0.088962   3.604 0.000313 ***
+virusJN                   -3.649140   0.146401 -24.926  < 2e-16 ***
+virusXBB                  -3.059061   0.146327 -20.906  < 2e-16 ***
+visitv2                    1.163401   0.069763  16.676  < 2e-16 ***
+visitv4                    1.683884   0.070509  23.882  < 2e-16 ***
+visitv5                    0.903053   0.068906  13.106  < 2e-16 ***
+variantD:vaccine           1.067667   0.167327   6.381 1.76e-10 ***
+variantO:vaccine           1.709097   0.199154   8.582  < 2e-16 ***
+Log(scale)                 0.616719   0.009419  65.475  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Scale: 1.853 
+
+Gaussian distribution
+Number of Newton-Raphson Iterations: 5 
+Log-likelihood: -1.224e+04 on 23 Df
+Wald-statistic:  5448 on 21 Df, p-value: < 2.22e-16 
+
+[1] "==================================================================="
+Permutation test for adonis under reduced model
+Permutation: free
+Number of permutations: 999
+
+adonis2(formula = distance_matrix_all ~ variant + virus + vaccine, data = all_wide_lessvar)
+           Df   SumOfSqs      R2      F Pr(>F)    
+Model       9  710315105 0.28173 56.352  0.001 ***
+Residual 1293 1810912719 0.71827                  
+Total    1302 2521227823 1.00000                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+       Df          SumOfSqs               R2               F             Pr(>F)     
+ Min.   :   9   Min.   :7.103e+08   Min.   :0.2817   Min.   :56.35   Min.   :0.001  
+ 1st Qu.: 651   1st Qu.:1.261e+09   1st Qu.:0.5000   1st Qu.:56.35   1st Qu.:0.001  
+ Median :1293   Median :1.811e+09   Median :0.7183   Median :56.35   Median :0.001  
+ Mean   : 868   Mean   :1.681e+09   Mean   :0.6667   Mean   :56.35   Mean   :0.001  
+ 3rd Qu.:1298   3rd Qu.:2.166e+09   3rd Qu.:0.8591   3rd Qu.:56.35   3rd Qu.:0.001  
+ Max.   :1302   Max.   :2.521e+09   Max.   :1.0000   Max.   :56.35   Max.   :0.001  
+                                                     NA's   :2       NA's   :2      
+[1] "==================================================================="
+[1] "vaccinated vs unvaccinated"
+   pairs Df SumsOfSqs  F.Model        R2 p.value p.adjusted sig
+1 1 vs 0  1 376647725 228.4917 0.1493906   0.001      0.001  **
+    pairs                 Df      SumsOfSqs            F.Model            R2            p.value        p.adjusted        sig           
+ Length:1           Min.   :1   Min.   :376647725   Min.   :228.5   Min.   :0.1494   Min.   :0.001   Min.   :0.001   Length:1          
+ Class :character   1st Qu.:1   1st Qu.:376647725   1st Qu.:228.5   1st Qu.:0.1494   1st Qu.:0.001   1st Qu.:0.001   Class :character  
+ Mode  :character   Median :1   Median :376647725   Median :228.5   Median :0.1494   Median :0.001   Median :0.001   Mode  :character  
+                    Mean   :1   Mean   :376647725   Mean   :228.5   Mean   :0.1494   Mean   :0.001   Mean   :0.001                     
+                    3rd Qu.:1   3rd Qu.:376647725   3rd Qu.:228.5   3rd Qu.:0.1494   3rd Qu.:0.001   3rd Qu.:0.001                     
+                    Max.   :1   Max.   :376647725   Max.   :228.5   Max.   :0.1494   Max.   :0.001   Max.   :0.001                     
+[1] "-------------------------------------------------------------------"
+   pairs Df SumsOfSqs   F.Model          R2 p.value p.adjusted sig
+1 O vs D  1  51333585 27.239635 0.023336797   0.001      0.003   *
+2 O vs A  1  10405103  5.128153 0.008502593   0.009      0.027   .
+3 D vs A  1   6210636  3.403514 0.003932864   0.037      0.111    
+    pairs                 Df      SumsOfSqs           F.Model             R2              p.value          p.adjusted        sig           
+ Length:3           Min.   :1   Min.   : 6210636   Min.   : 3.404   Min.   :0.003933   Min.   :0.00100   Min.   :0.003   Length:3          
+ Class :character   1st Qu.:1   1st Qu.: 8307870   1st Qu.: 4.266   1st Qu.:0.006218   1st Qu.:0.00500   1st Qu.:0.015   Class :character  
+ Mode  :character   Median :1   Median :10405103   Median : 5.128   Median :0.008503   Median :0.00900   Median :0.027   Mode  :character  
+                    Mean   :1   Mean   :22649775   Mean   :11.924   Mean   :0.011924   Mean   :0.01567   Mean   :0.047                     
+                    3rd Qu.:1   3rd Qu.:30869344   3rd Qu.:16.184   3rd Qu.:0.015920   3rd Qu.:0.02300   3rd Qu.:0.069                     
+                    Max.   :1   Max.   :51333585   Max.   :27.240   Max.   :0.023337   Max.   :0.03700   Max.   :0.111                     
+[1] "-------------------------------------------------------------------"
+            pairs Df SumsOfSqs    F.Model          R2 p.value p.adjusted sig
+1  D614G vs Alpha  1  63076930  27.646308 0.064799127   0.001      0.021   .
+2  D614G vs Delta  1  56714171  26.622948 0.060696661   0.001      0.021   .
+3    D614G vs BA1  1 120637628  55.972943 0.119098224   0.001      0.021   .
+4    D614G vs BA2  1  70155709  29.464190 0.066440968   0.001      0.021   .
+5    D614G vs BA5  1 195932473 107.590114 0.209895023   0.001      0.021   .
+6     D614G vs BQ  1 151721750  73.702110 0.204329579   0.001      0.021   .
+7  Alpha vs Delta  1   8251628   4.835276 0.012032979   0.011      0.231    
+8    Alpha vs BA1  1  11537394   6.651242 0.016396453   0.004      0.084    
+9    Alpha vs BA2  1   4688827   2.381475 0.005933195   0.091      1.000    
+10   Alpha vs BA5  1  36988838  26.844781 0.064399945   0.001      0.021   .
+11    Alpha vs BQ  1  42874161  29.853047 0.098899273   0.001      0.021   .
+12   Delta vs BA1  1  35122620  21.943593 0.050567847   0.001      0.021   .
+13   Delta vs BA2  1  20855841  11.412551 0.026953738   0.001      0.021   .
+14   Delta vs BA5  1  62484154  49.893258 0.110165602   0.001      0.021   .
+15    Delta vs BQ  1  67322278  53.599568 0.158297805   0.001      0.021   .
+16     BA1 vs BA2  1   7399939   3.991506 0.009549251   0.021      0.441    
+17     BA1 vs BA5  1  11794271   9.198043 0.022206873   0.003      0.063    
+18      BA1 vs BQ  1  17437677  13.432264 0.044709792   0.001      0.021   .
+19     BA2 vs BA5  1  34881893  23.054163 0.053858052   0.001      0.021   .
+20      BA2 vs BQ  1  36978383  22.771878 0.073511765   0.001      0.021   .
+21      BA5 vs BQ  1   5573159   7.112289 0.024945571   0.002      0.042   .

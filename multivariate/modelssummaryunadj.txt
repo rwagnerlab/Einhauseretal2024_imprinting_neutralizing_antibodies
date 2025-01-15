@@ -1,0 +1,50 @@
+[1] "Vaccinated Multivariate-Model:"
+Permutation test for adonis under reduced model
+Terms added sequentially (first to last)
+Permutation: free
+Number of permutations: 999
+
+adonis2(formula = distance_matrix_vax ~ Age + Gender + Nicotine_consumption + variant + Timebetweenvaccination_infection + Number_of_vaccinations + vector + virus, data = merged_data_vax)
+                                  Df   SumOfSqs      R2       F Pr(>F)    
+Age                                1   23603224 0.00962 11.9184  0.001 ***
+Gender                             1    5641324 0.00230  2.8486  0.052 .  
+Nicotine_consumption               2    6126840 0.00250  1.5469  0.168    
+variant                            2   22382488 0.00912  5.6510  0.001 ***
+Timebetweenvaccination_infection   1   26382210 0.01075 13.3217  0.001 ***
+Number_of_vaccinations             1   10392529 0.00424  5.2477  0.009 ** 
+vector                             1    2935361 0.00120  1.4822  0.193    
+virus                              6  484912399 0.19761 40.8093  0.001 ***
+Residual                         945 1871475752 0.76267                   
+Total                            960 2453852127 1.00000                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] "-------------------------------------------------------"
+[1] "Unvaccinated Multivariate-Model:"
+Permutation test for adonis under reduced model
+Terms added sequentially (first to last)
+Permutation: free
+Number of permutations: 999
+
+adonis2(formula = distance_matrix_unvax ~ Age + Gender + Nicotine_consumption + variant + virus, data = merged_data_unvax)
+                      Df  SumOfSqs      R2       F Pr(>F)    
+Age                    1     74450 0.00023  0.0969  0.978    
+Gender                 1   1216796 0.00370  1.5844  0.188    
+Nicotine_consumption   2   5645462 0.01716  3.6756  0.005 ** 
+variant                2  12867285 0.03911  8.3775  0.001 ***
+virus                  6  56564873 0.17191 12.2759  0.001 ***
+Residual             329 252661545 0.76790                   
+Total                341 329030412 1.00000                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] "========================================================"
+[1] "Post Hoc testing"
+[1] "Vaccinated Model:"
+   pairs Df SumsOfSqs  F.Model          R2 p.value p.adjusted sig
+1 O vs D  1  17132063 6.786208 0.008014074   0.003      0.009   *
+2 O vs A  1  10744318 4.144318 0.008220500   0.026      0.078    
+3 D vs A  1   2855978 1.137543 0.001971009   0.307      0.921    
+[1] "Unvaccinated Model:"
+   pairs Df SumsOfSqs  F.Model         R2 p.value p.adjusted sig
+1 D vs O  1   7986181 9.768133 0.03173861   0.001      0.003   *
+2 D vs A  1   6681440 7.219789 0.02479155   0.001      0.003   *
+3 O vs A  1   7172402 5.629828 0.05539543   0.002      0.006   *
