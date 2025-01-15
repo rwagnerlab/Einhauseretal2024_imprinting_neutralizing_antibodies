@@ -1,5 +1,5 @@
 # Einhauser et al. 2024: Longitudinal effects of SARS-CoV-2 breakthrough infection on imprinting of neutralizing antibody responses
-This repository contains code and data for the publication "Longitudinal effects of SARS-CoV-2 breakthrough infection on imprinting of neutralizing antibody responses" published in ...
+This repository contains code and data for the publication "Longitudinal effects of SARS-CoV-2 breakthrough infection on imprinting of neutralizing antibody responses" published in eBiomedicine (https://www.thelancet.com/pdfs/journals/ebiom/PIIS2352-3964(24)00474-2.pdf)
 If you use code or data from this repository, please cite the main publication and link this repository.
 
 ## Contents
@@ -7,7 +7,7 @@ If you use code or data from this repository, please cite the main publication a
 * Data: various .xlsx files containing measured longitudinal neutralization data against multiple SARS-CoV-2 variants, information about vaccine status, breakthrough variant and socio deographics, encoded by IDs. (will be uploaded upon acception of the manuscript)
 * R scripts for the figures in the manuscript.
 ## More Info & Contact:
-Please visit www.wagner-lab.de or contact the corresponding author of the main publication with the contact details provided there.
+Please visit www.wagner-lab.de or contact the corresponding author (Ralf Wagner) of the main publication with the contact details provided there.
 
 ## Detailed content description:
 The manuscript contains 5 Main Figures and 10 Supplemental Figures as indicated in the script names. 
